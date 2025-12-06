@@ -12,9 +12,9 @@ interface TaskItemProps {
 export const TaskItem: React.FC<TaskItemProps> = ({ task, onToggle, onDelete, onEdit }) => {
   
   const priorityBadgeStyles = {
-    [Priority.HIGH]: 'bg-red-100 text-red-700 border-red-200',
-    [Priority.MED]: 'bg-orange-100 text-orange-700 border-orange-200',
-    [Priority.LOW]: 'bg-emerald-100 text-emerald-700 border-emerald-200',
+    [Priority.HIGH]: 'bg-red-100 text-red-800 border-red-200',
+    [Priority.MED]: 'bg-orange-100 text-orange-800 border-orange-200',
+    [Priority.LOW]: 'bg-emerald-100 text-emerald-800 border-emerald-200',
   };
 
   const priorityBorderStyles = {
@@ -56,7 +56,7 @@ export const TaskItem: React.FC<TaskItemProps> = ({ task, onToggle, onDelete, on
             <h4 className={`text-base font-medium truncate ${task.completed ? 'text-slate-500 line-through' : 'text-slate-900'}`}>
               {task.title}
             </h4>
-            <span className={`text-xs px-2 py-0.5 rounded-full border font-medium uppercase tracking-wider ${priorityBadgeStyles[task.priority]}`}>
+            <span className={`shrink-0 text-xs px-2.5 py-0.5 rounded-full border font-semibold uppercase tracking-wider ${priorityBadgeStyles[task.priority]}`}>
               {priorityLabels[task.priority]}
             </span>
           </div>
